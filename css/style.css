@@ -29619,6 +29619,7 @@ h1.entry-title {
 
 @media(max-width:1024px) {
 	.elementor-146 .elementor-element.elementor-element-a193424 {
+		--padding-top: 40px;
 		--padding-bottom: 10px;
 		--padding-left: 40px;
 		--padding-right: 40px;
@@ -50228,6 +50229,7 @@ body.mobile-menu-open {
     align-items: center !important;
     justify-content: center !important;
   }
+
 }
 
 /* ==========================================================================
@@ -50891,6 +50893,57 @@ body.mobile-menu-open {
 }
 
 /* ==========================================================================
+   Tablet and Mobile Gap Reduction (<= 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Remove excessive gap between Client Experience and Success Stories on Tablet & Mobile */
+  .elementor-11 .elementor-element.elementor-element-6150323a {
+    padding-bottom: 10px !important;
+    --padding-bottom: 10px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-6150323a > .e-con-inner {
+    padding-bottom: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-7b0600bb {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-22410900 {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-22410900 .elementskit-testimonial-slider {
+    padding-bottom: 24px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-22410900 .elementskit-testimonial-slider .swiper-pagination {
+    bottom: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-0bec316 {
+    padding-top: 25px !important;
+    --padding-top: 25px !important;
+    margin-top: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-0bec316 > .e-con-inner {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+  }
+
+  .elementor-11 .elementor-element.elementor-element-2c9c2d0 {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+  }
+}
+
+/* ==========================================================================
    Mobile-Specific Layouts (<= 767px)
    ========================================================================== */
 @media (max-width: 767px) {
@@ -51019,7 +51072,6 @@ body.mobile-menu-open {
   .elementor-element.elementor-element-c0bf67e,
   .elementor-11 .elementor-element.elementor-element-2a84e6d,
   .elementor-element.elementor-element-a3464d6,
-  .elementor-11 .elementor-element.elementor-element-0bec316,
   .elementor-11 .elementor-element.elementor-element-5c2445b,
   .elementor-element.elementor-element-76ac05d9,
   .elementor-element.elementor-element-161ad6a6,
@@ -51077,13 +51129,32 @@ body.mobile-menu-open {
     margin-bottom: 0 !important;
   }
 
-  /* CTA Banners */
-  .elementor-11 .elementor-element.elementor-element-6150323a,
+  /* CTA Banner on Precision Machining */
   .elementor-1042 .elementor-element.elementor-element-3f39a2c {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
     --padding-top: 50px !important;
     --padding-bottom: 50px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Client Experience (Testimonials) on Mobile: tight bottom spacing */
+  .elementor-11 .elementor-element.elementor-element-6150323a {
+    padding-top: 50px !important;
+    padding-bottom: 10px !important;
+    --padding-top: 50px !important;
+    --padding-bottom: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Success Stories Section on Mobile: tight top spacing */
+  .elementor-11 .elementor-element.elementor-element-0bec316 {
+    padding-top: 25px !important;
+    padding-bottom: 60px !important;
+    --padding-top: 25px !important;
+    --padding-bottom: 60px !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
