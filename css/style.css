@@ -51142,7 +51142,7 @@ body.mobile-menu-open {
   /* Client Experience (Testimonials) on Mobile: tight bottom spacing */
   .elementor-11 .elementor-element.elementor-element-6150323a {
     padding-top: 50px !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 40px !important;
     --padding-top: 50px !important;
     --padding-bottom: 10px !important;
     margin-top: 0 !important;
@@ -51151,7 +51151,7 @@ body.mobile-menu-open {
 
   /* Success Stories Section on Mobile: tight top spacing */
   .elementor-11 .elementor-element.elementor-element-0bec316 {
-    padding-top: 25px !important;
+    padding-top: 50px !important;
     padding-bottom: 60px !important;
     --padding-top: 25px !important;
     --padding-bottom: 60px !important;
