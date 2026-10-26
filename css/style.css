@@ -19123,7 +19123,6 @@ button.elementskit-menu-hamburger {
 
 	button.elementskit-menu-close,
 	button.elementskit-menu-hamburger {
-		padding: 8px;
 		background-color: transparent;
 		border-radius: .25rem;
 		position: relative;
@@ -29253,12 +29252,10 @@ h1.entry-title {
 	--column-gap: 40px;
 	--border-radius: 50px 50px 0px 0px;
 	box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.07);
-	--margin-top: 22px;
-	--margin-bottom: 0px;
+	--padding-bottom: 10px;
 	--margin-left: 0px;
 	--margin-right: 0px;
-	--padding-top: 80px;
-	--padding-bottom: 20px;
+
 	--padding-left: 60px;
 	--padding-right: 60px;
 }
@@ -29622,8 +29619,7 @@ h1.entry-title {
 
 @media(max-width:1024px) {
 	.elementor-146 .elementor-element.elementor-element-a193424 {
-		--padding-top: 60px;
-		--padding-bottom: 60px;
+		--padding-bottom: 10px;
 		--padding-left: 40px;
 		--padding-right: 40px;
 	}
@@ -29641,8 +29637,7 @@ h1.entry-title {
 
 @media(max-width:767px) {
 	.elementor-146 .elementor-element.elementor-element-a193424 {
-		--padding-top: 40px;
-		--padding-bottom: 40px;
+		--padding-bottom: 10px;
 		--padding-left: 20px;
 		--padding-right: 20px;
 	}
@@ -30022,7 +30017,6 @@ h1.entry-title {
 
 	.elementor-15 .elementor-element.elementor-element-b2e6a4b button.elementskit-menu-hamburger {
 		float: left;
-		padding: 6px 8px 0px 8px;
 		width: 45px;
 		border-radius: 0px;
 		border-width: 0px 0px 0px 0px;
@@ -36232,7 +36226,7 @@ body.rtl .elementor-11 .elementor-element.elementor-element-0a139db {
 	--container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
 	--padding-top: 0px;
 	--padding-bottom: 0px;
-	--padding-left: 200px;
+	--padding-left: 0px;
 	--padding-right: 0px;
 }
 
@@ -42177,6 +42171,8 @@ body.rtl .elementor-78 .elementor-element.elementor-element-1a489451 {
 	--display: flex;
 	--padding-top: 32px;
 	--padding-bottom: 32px;
+	--padding-left: 32px;
+	--padding-right: 32px;
 }
 
 .elementor-96 .elementor-element.elementor-element-204929f:not(.elementor-motion-effects-element-type-background),
@@ -49897,7 +49893,7 @@ header[data-elementor-type="header"],
 }
 
 .qlwapp__container.qlwapp__container--bottom-right .qlwapp__button {
-  margin: 24px 20px 24px auto;
+  margin: 24px 24px 24px auto;
 }
 
 .qlwapp__button {
@@ -49925,8 +49921,8 @@ header[data-elementor-type="header"],
 }
 
 .qlwapp__button--bubble {
-  width: var(--qlwapp-scheme-icon-size, 60px);
-  height: var(--qlwapp-scheme-icon-size, 60px);
+  width: 55px;
+  height: 55px;
 }
 
 .qlwapp__container--rounded .qlwapp__button--bubble {
@@ -50898,11 +50894,223 @@ body.mobile-menu-open {
    Mobile-Specific Layouts (<= 767px)
    ========================================================================== */
 @media (max-width: 767px) {
-  /* Gutter padding on mobile */
-  .e-con-boxed > .e-con-inner,
-  .elementor-section.elementor-section-boxed > .elementor-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+  /* ==========================================================================
+     Unified Mobile Section Padding & Margins (Same as Home About Section)
+     - Standard full-width container: width 100%, margin 0
+     - Equal left & right padding: 20px (matching About section clamp(20px, 4vw, 40px))
+     - Balanced top & bottom padding: 60px for content sections, 50px for banners/counters
+     - Inner container: 100% width, 0 margin, 0 left/right padding (no double padding)
+     ========================================================================== */
+  
+  /* Top-Level Section Containers on all pages */
+  .elementor > .e-con.e-parent,
+  .elementor > .e-parent,
+  .elementor > .elementor-element.e-parent,
+  .elementor-section-wrap > .elementor-element,
+  .elementor-11 .elementor-element.e-parent,
+  .elementor-78 .elementor-element.e-parent,
+  .elementor-80 .elementor-element.e-parent,
+  .elementor-82 .elementor-element.e-parent,
+  .elementor-85 .elementor-element.e-parent,
+  .elementor-519 .elementor-element.e-parent,
+  .elementor-1002 .elementor-element.e-parent,
+  .elementor-1042 .elementor-element.e-parent,
+  .elementor-146 .elementor-element.e-parent,
+  .elementor-element.elementor-element-0b37a22,
+  .elementor-element.elementor-element-c0bf67e,
+  .elementor-element.elementor-element-2a84e6d,
+  .elementor-element.elementor-element-a3464d6,
+  .elementor-element.elementor-element-0bec316,
+  .elementor-element.elementor-element-5c2445b,
+  .elementor-element.elementor-element-02df505,
+  .elementor-element.elementor-element-61e811b,
+  .elementor-element.elementor-element-6150323a,
+  .elementor-element.elementor-element-8dfa7c7,
+  .elementor-element.elementor-element-a193424,
+  .elementor-element.elementor-element-6399e5b1,
+  .elementor-element.elementor-element-76ac05d9,
+  .elementor-element.elementor-element-20fa56a,
+  .elementor-element.elementor-element-161ad6a6,
+  .elementor-element.elementor-element-32db6949,
+  .elementor-element.elementor-element-8dbb5a7,
+  .elementor-element.elementor-element-2eb6b615,
+  .elementor-element.elementor-element-3acbe7a1,
+  .elementor-element.elementor-element-63058c96,
+  .elementor-element.elementor-element-490d64a,
+  .elementor-element.elementor-element-6453833,
+  .elementor-element.elementor-element-179daee,
+  .elementor-element.elementor-element-3f39a2c,
+  .elementor-element.elementor-element-9cab6d8,
+  .elementor-element.elementor-element-99aa42b,
+  .elementor-element.elementor-element-33672e79,
+  .elementor-element.elementor-element-c290adf,
+  .elementor-element.elementor-element-c6194bb,
+  .elementor-element.elementor-element-a8c804b,
+  .elementor-element.elementor-element-1520fdd,
+  .elementor-element.elementor-element-4041fdbd {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    --padding-left: 20px !important;
+    --padding-right: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Inner containers of all top-level sections: full width, 0 padding, 0 margin */
+  .elementor > .e-con.e-parent > .e-con-inner,
+  .elementor > .e-parent > .e-con-inner,
+  .elementor > .elementor-element.e-parent > .e-con-inner,
+  .elementor-section-wrap > .elementor-element > .elementor-container,
+  .elementor-11 .elementor-element.e-parent > .e-con-inner,
+  .elementor-78 .elementor-element.e-parent > .e-con-inner,
+  .elementor-80 .elementor-element.e-parent > .e-con-inner,
+  .elementor-82 .elementor-element.e-parent > .e-con-inner,
+  .elementor-85 .elementor-element.e-parent > .e-con-inner,
+  .elementor-519 .elementor-element.e-parent > .e-con-inner,
+  .elementor-1002 .elementor-element.e-parent > .e-con-inner,
+  .elementor-1042 .elementor-element.e-parent > .e-con-inner,
+  .elementor-146 .elementor-element.e-parent > .e-con-inner,
+  .elementor-element.elementor-element-0b37a22 > .e-con-inner,
+  .elementor-element.elementor-element-c0bf67e > .e-con-inner,
+  .elementor-element.elementor-element-2a84e6d > .e-con-inner,
+  .elementor-element.elementor-element-a3464d6 > .e-con-inner,
+  .elementor-element.elementor-element-0bec316 > .e-con-inner,
+  .elementor-element.elementor-element-5c2445b > .e-con-inner,
+  .elementor-element.elementor-element-02df505 > .e-con-inner,
+  .elementor-element.elementor-element-61e811b > .e-con-inner,
+  .elementor-element.elementor-element-6150323a > .e-con-inner,
+  .elementor-element.elementor-element-8dfa7c7 > .e-con-inner,
+  .elementor-element.elementor-element-a193424 > .e-con-inner,
+  .elementor-element.elementor-element-6399e5b1 > .e-con-inner,
+  .elementor-element.elementor-element-76ac05d9 > .e-con-inner,
+  .elementor-element.elementor-element-20fa56a > .e-con-inner,
+  .elementor-element.elementor-element-161ad6a6 > .e-con-inner,
+  .elementor-element.elementor-element-32db6949 > .e-con-inner,
+  .elementor-element.elementor-element-8dbb5a7 > .e-con-inner,
+  .elementor-element.elementor-element-2eb6b615 > .e-con-inner,
+  .elementor-element.elementor-element-3acbe7a1 > .e-con-inner,
+  .elementor-element.elementor-element-63058c96 > .e-con-inner,
+  .elementor-element.elementor-element-490d64a > .e-con-inner,
+  .elementor-element.elementor-element-6453833 > .e-con-inner,
+  .elementor-element.elementor-element-179daee > .e-con-inner,
+  .elementor-element.elementor-element-3f39a2c > .e-con-inner,
+  .elementor-element.elementor-element-9cab6d8 > .e-con-inner,
+  .elementor-element.elementor-element-99aa42b > .e-con-inner,
+  .elementor-element.elementor-element-33672e79 > .e-con-inner,
+  .elementor-element.elementor-element-c290adf > .e-con-inner,
+  .elementor-element.elementor-element-c6194bb > .e-con-inner,
+  .elementor-element.elementor-element-a8c804b > .e-con-inner,
+  .elementor-element.elementor-element-1520fdd > .e-con-inner,
+  .elementor-element.elementor-element-4041fdbd > .e-con-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Specific Top & Bottom Padding and Margins for Content Sections */
+  .elementor-11 .elementor-element.elementor-element-0b37a22,
+  .elementor-element.elementor-element-c0bf67e,
+  .elementor-11 .elementor-element.elementor-element-2a84e6d,
+  .elementor-element.elementor-element-a3464d6,
+  .elementor-11 .elementor-element.elementor-element-0bec316,
+  .elementor-11 .elementor-element.elementor-element-5c2445b,
+  .elementor-element.elementor-element-76ac05d9,
+  .elementor-element.elementor-element-161ad6a6,
+  .elementor-element.elementor-element-32db6949,
+  .elementor-element.elementor-element-2eb6b615,
+  .elementor-element.elementor-element-3acbe7a1,
+  .elementor-element.elementor-element-63058c96,
+  .elementor-element.elementor-element-6453833,
+  .elementor-element.elementor-element-179daee,
+  .elementor-element.elementor-element-99aa42b,
+  .elementor-element.elementor-element-33672e79,
+  .elementor-element.elementor-element-a8c804b,
+  .elementor-element.elementor-element-1520fdd,
+  .elementor-element.elementor-element-4041fdbd {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    --padding-top: 60px !important;
+    --padding-bottom: 60px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Counter Sections */
+  .elementor-11 .elementor-element.elementor-element-02df505,
+  .elementor-78 .elementor-element.elementor-element-20fa56a {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    --padding-top: 50px !important;
+    --padding-bottom: 50px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Home Hero Section */
+  .elementor-11 .elementor-element.elementor-element-61e811b {
+    padding-top: 100px !important;
+    padding-bottom: 35px !important;
+    --padding-top: 100px !important;
+    --padding-bottom: 35px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Inner Page Hero Banners */
+  .elementor-element.elementor-element-6399e5b1,
+  .elementor-element.elementor-element-8dbb5a7,
+  .elementor-element.elementor-element-490d64a,
+  .elementor-element.elementor-element-9cab6d8,
+  .elementor-element.elementor-element-c6194bb {
+    padding-top: 95px !important;
+    padding-bottom: 40px !important;
+    --padding-top: 95px !important;
+    --padding-bottom: 40px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* CTA Banners */
+  .elementor-11 .elementor-element.elementor-element-6150323a,
+  .elementor-1042 .elementor-element.elementor-element-3f39a2c {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    --padding-top: 50px !important;
+    --padding-bottom: 50px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Client Logos Carousel / Grid */
+  .elementor-11 .elementor-element.elementor-element-8dfa7c7 {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+    --padding-top: 35px !important;
+    --padding-bottom: 35px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Footer Section */
+  .elementor-146 .elementor-element.elementor-element-a193424,
+  footer .elementor-element.elementor-element-a193424,
+  .site-footer .elementor-element.elementor-element-a193424 {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Avoid double padding inside contact form */
+  .metform-form-main-wrapper .e-parent {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   img, video {
@@ -50982,7 +51190,7 @@ body.mobile-menu-open {
 
   /* Home: Industries we Serve on Mobile */
   .elementor-element-a3464d6 {
-    padding: 40px 0 !important;
+    padding: 60px 20px !important;
   }
 
   .elementor-element-b9d7609,
@@ -51175,8 +51383,8 @@ body.mobile-menu-open {
   /* Floating WhatsApp and Scroll to Top on Mobile */
   .qlwapp__container.qlwapp__container--bottom-right .qlwapp__button {
     margin: 16px 16px 16px auto !important;
-    width: 54px !important;
-    height: 54px !important;
+    width: 46px !important;
+    height: 46px !important;
   }
 
   .qlwapp__icon {
@@ -51184,7 +51392,7 @@ body.mobile-menu-open {
   }
 
   #ast-scroll-top {
-    bottom: 84px !important;
+    bottom: 70px !important;
     right: 16px !important;
     width: 46px !important;
     height: 46px !important;
