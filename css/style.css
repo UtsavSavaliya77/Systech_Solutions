@@ -36239,7 +36239,7 @@ body.rtl .elementor-11 .elementor-element.elementor-element-0a139db {
 .elementor-78 .elementor-element.elementor-element-b141daa {
 	width: var(--container-widget-width, 550px);
 	max-width: 550px;
-	--container-widget-width: 550px;
+	/* --container-widget-width: 550px; */
 	--container-widget-flex-grow: 0;
 	font-family: var(--e-global-typography-d511156-font-family), Sans-serif;
 	font-size: var(--e-global-typography-d511156-font-size);
@@ -39843,6 +39843,7 @@ body.rtl .elementor-78 .elementor-element.elementor-element-1a489451 {
 	}
 
 	.elementor-86 .elementor-element.elementor-element-a54158b {
+		--flex-direction: column;
 		--gap: 16px 16px;
 		--row-gap: 16px;
 		--column-gap: 16px;
@@ -50875,16 +50876,6 @@ body.mobile-menu-open {
    Tablet and Mobile Gap Reduction (<= 1024px)
    ========================================================================== */
 @media (max-width: 1024px) {
-  /* Remove excessive gap between Client Experience and Success Stories on Tablet & Mobile */
-  .elementor-11 .elementor-element.elementor-element-6150323a {
-    padding-bottom: 10px !important;
-    --padding-bottom: 10px !important;
-  }
-
-  .elementor-11 .elementor-element.elementor-element-6150323a > .e-con-inner {
-    padding-bottom: 0px !important;
-  }
-
   .elementor-11 .elementor-element.elementor-element-7b0600bb {
     padding-bottom: 0px !important;
     margin-bottom: 0px !important;
@@ -51178,7 +51169,7 @@ body.mobile-menu-open {
   /* Home: Testimonials (Client Experience) */
   .elementor-11 .elementor-element.elementor-element-6150323a > .e-con-inner {
     padding-top: 40px !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 35px !important;
   }
 
   /* Home: Success Stories */
